@@ -8,7 +8,10 @@ namespace Vendor.Models
     public int OrderId { get; }
     private static List<Order> _orderInstances = new List<Order> { };
 
+    public Order(string orderInfo)
+    {
 
+    }
 
     public static void ClearAll()
     {
