@@ -72,7 +72,7 @@ namespace Vendor.Tests
       string info = "3 Scones";
       Order newOrder = new Order(info);
 
-      int result = newOrder.Id;
+      int result = newOrder.OrderId;
       Assert.AreEqual(1, result);
     }
 
