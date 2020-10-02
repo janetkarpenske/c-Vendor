@@ -16,7 +16,7 @@ namespace Vendor.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfAnOrder_Order()
     {
-      Order newOrder = new Order("testInfo", "testPrice");
+      Order newOrder = new Order("testInfo", "testPrice", "testDate");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -26,9 +26,10 @@ namespace Vendor.Tests
       //Arrange
       string info = "8 Croissants.";
       string price = "$12";
+      string date = "08/15/1996";
 
       //Act
-      Order newOrder = new Order(info, price);
+      Order newOrder = new Order(info, price, date);
       string result = newOrder.OrderInfo;
 
       //Assert
@@ -40,7 +41,8 @@ namespace Vendor.Tests
     {
       string info = "9 Cakes.";
       string price = "$40.";
-      Order newOrder = new Order(info, price);
+      string date = "08/15/1996";
+      Order newOrder = new Order(info, price, date);
 
       string updatedOrderInfo = "10 Cakes";
       newOrder.OrderInfo = updatedOrderInfo;
@@ -60,10 +62,12 @@ namespace Vendor.Tests
     {
       string info1 = "8 Cakes";
       string price1 = "$10";
+      string date1 = "08/15/1996";
       string info2 = "10 Cakes";
       string price2 = "$20";
-      Order newOrder1 = new Order(info1, price1);
-      Order newOrder2 = new Order(info2, price2);
+      string date2 = "08/15/1996";
+      Order newOrder1 = new Order(info1, price1, date1);
+      Order newOrder2 = new Order(info2, price2, date2);
       List<Order> newOrder = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAllOrders();
@@ -75,7 +79,8 @@ namespace Vendor.Tests
     {
       string info = "3 Scones";
       string price = "$50";
-      Order newOrder = new Order(info, price);
+      string date = "08/15/1996";
+      Order newOrder = new Order(info, price, date);
 
       int result = newOrder.OrderId;
       Assert.AreEqual(1, result);
@@ -87,10 +92,12 @@ namespace Vendor.Tests
       //Arrange
       string info1 = "8 Cakes, 3 Brownies";
       string price1 = "$60";
+      string date1 = "08/15/1996";
       string info2 = "2 Scones";
       string price2 = "$20";
-      Order newOrder1 = new Order(info1, price1);
-      Order newOrder2 = new Order(info2, price2);
+      string date2 = "08/15/1996";
+      Order newOrder1 = new Order(info1, price1, date1);
+      Order newOrder2 = new Order(info2, price2, date2);
 
       //Act
       Order result = Order.FindOrder(2);

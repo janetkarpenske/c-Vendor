@@ -8,6 +8,16 @@
 
 This program allows the user to add different vendors to a list and keep track of their orders.
 
+## Specifications
+| Description | Input | Output |
+|-------------|---------------|--------|
+| Project creates an instance of an order object to store order information. | let newOrder = new Order(); | newOrder |
+| Project can return a description of the order. | newOrder.getInfo(); | "8 Croissants" |
+| Project stores orders in a list. | List<Order> = new List<Order> | { Order, Order }; |
+| Project creates an instance of a vendor object to store information. | let newVendor = new Vendor(); | newVendor |
+| Project can return a description of the vendor. | newVendor.getInfo(); | "Suzie's capcakes is a cupcake shop." |
+| Project stores Vendors in a list. | List<Vendor> = new List<Vendor> | { Vendor, Vendor }; |
+
 ## Setup/Installation Requirements
 
 * Download or Clone project from Github repository.
@@ -30,16 +40,6 @@ C#, MVCTest, and Markdown.
 
 ## Link To Active Site:
 Not Applicable
-
-## Specifications
-| Description | Input | Output |
-|-------------|---------------|--------|
-| Project creates an instance of an order object to store order information. | let newOrder = new Order(); | newOrder |
-| Project can return a description of the order. | newOrder.getInfo(); | "8 Croissants" |
-| Project stores orders in a list. | List<Order> = new List<Order> | { Order, Order }; |
-| Project creates an instance of a vendor object to store information. | let newVendor = new Vendor(); | newVendor |
-| Project can return a description of the vendor. | newVendor.getInfo(); | "Suzie's capcakes is a cupcake shop." |
-| Project stores Vendors in a list. | List<Vendor> = new List<Vendor> | { Vendor, Vendor }; |
 
 ### License
 

@@ -66,7 +66,8 @@ namespace Vendor.Tests
     {
       string info = "12 Cupcakes, 12 Cake Pops";
       string price = "$20";
-      Order newOrder = new Order(info, price);
+      string date = "08/15/1996";
+      Order newOrder = new Order(info, price, date);
       List<Order> newOrderList = new List<Order> { newOrder };
       string VendName = "Suzie's Cupcakes";
       Vend newVend = new Vend(VendName);
