@@ -50,5 +50,16 @@ namespace Vendor.Tests
       CollectionAssert.AreEqual(newVendList, result);
     }
 
+    [TestMethod]
+    public void FindVend_ReturnsASpecificVendor_Vend()
+    {
+      string name1 = "Suzie's Cupcakes";
+      string name2 = "David's Donut Shop";
+      Vend newVend1 = new Vend(name1);
+      Vend newVend2 = new Vend(name2);
+
+      Vend result = Vend.FindVend(2);
+      Assert.AreEqual(newVend2, result);
+    }
   }
 }
