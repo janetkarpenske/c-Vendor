@@ -15,6 +15,12 @@ namespace Vendor.Models
       OrderId = _orderInstances.Count;
     }
 
+    public static List<Order> GetAllOrders()
+    {
+      return _orderInstances;
+    }
+
+
     public static void ClearAll()
     {
       _orderInstances.Clear();
