@@ -10,7 +10,9 @@ namespace Vendor.Models
 
     public Order(string orderInfo)
     {
-
+      OrderInfo = orderInfo;
+      _orderInstances.Add(this);
+      OrderId = _orderInstances.Count;
     }
 
     public static void ClearAll()
