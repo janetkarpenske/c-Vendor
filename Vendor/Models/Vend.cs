@@ -17,6 +17,11 @@ namespace Vendor.Models
       Orders = new List<Order> { };
     }
 
+    public static List<Vend> GetAllVends()
+    {
+      return _VendInstances;
+    }
+
     public static void ClearAll()
     {
       _VendInstances.Clear();
