@@ -20,6 +20,20 @@ namespace Vendor.Tests
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
+    [TestMethod]
+    public void GetInfo_ReturnsInfoOnOrder_String()
+    {
+      //Arrange
+      string info = "8 Croissants.";
+
+      //Act
+      Order newOrder = new Order(info);
+      string result = newOrder.OrderInfo;
+
+      //Assert
+      Assert.AreEqual(info, result);
+    }
+
 
   }
 }
