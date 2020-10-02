@@ -13,14 +13,12 @@ namespace Vendor.Tests
     {
       Vend.ClearAll();
     }
-
         [TestMethod]
     public void VendConstructor_CreatesInstanceOfAVendor_Vend()
     {
       Vend newVend = new Vend("test vendor");
       Assert.AreEqual(typeof(Vend), newVend.GetType());
     }
-
         [TestMethod]
     public void GetVendName_ReturnsVendName_String()
     {
@@ -30,7 +28,6 @@ namespace Vendor.Tests
       string result = newVend.VendName;
       Assert.AreEqual(vendName, result);
     }
-
         [TestMethod]
     public void GetVendId_ReturnsVendId_Int()
     {
@@ -39,6 +36,18 @@ namespace Vendor.Tests
 
       int result = newVend.VendId;
       Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void GetAllVends_ReturnsTheListOfAllVends_VendList()
+    {
+      string name1 = "Suzie's Cupcakes";
+      string name2 = "David's Donut Shop";
+      Vend newVend1 = new Vend(name1);
+      Vend newVend2 = new Vend(name2);
+      List<Vend> newVendList = new List<Vend> { newVend1, newVend2 };
+
+      List<Vend> result = Vend.GetAllVends();
+      CollectionAssert.AreEqual(newVendList, result);
     }
 
   }
