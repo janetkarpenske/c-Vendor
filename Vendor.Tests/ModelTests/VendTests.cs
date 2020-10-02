@@ -21,5 +21,15 @@ namespace Vendor.Tests
       Assert.AreEqual(typeof(Vend), newVend.GetType());
     }
 
+        [TestMethod]
+    public void GetVendName_ReturnsVendName_String()
+    {
+      string vendName = "Suzie's Cupcakes";
+      Vend newVend = new Vend(vendName);
+
+      string result = newVend.VendName;
+      Assert.AreEqual(vendName, result);
+    }
+
   }
 }
