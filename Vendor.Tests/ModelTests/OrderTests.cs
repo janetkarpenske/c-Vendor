@@ -76,5 +76,20 @@ namespace Vendor.Tests
       Assert.AreEqual(1, result);
     }
 
+    public void FindOrder_ReturnsTheCorrectOrder_Order()
+    {
+      //Arrange
+      string info1 = "8 Cakes, 3 Brownies";
+      string info2 = "2 Scones";
+      Order newOrder1 = new Order(info1);
+      Order newOrder2 = new Order(info2);
+
+      //Act
+      Order result = Order.FindOrder(2);
+
+      //Assert
+      Assert.AreEqual(newOrder2, result);
+    }
+
   }
 }
