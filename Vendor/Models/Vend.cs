@@ -11,7 +11,10 @@ namespace Vendor.Models
 
     public Vend(string vendName)
     {
-
+      VendName = vendName;
+      _VendInstances.Add(this);
+      VendId = _VendInstances.Count;
+      Orders = new List<Order> { };
     }
 
     public static void ClearAll()
