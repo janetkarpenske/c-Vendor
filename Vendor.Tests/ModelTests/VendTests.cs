@@ -65,7 +65,8 @@ namespace Vendor.Tests
     public void AddOrder_AssignsAnOrderToAVendor_OrderList()
     {
       string info = "12 Cupcakes, 12 Cake Pops";
-      Order newOrder = new Order(info);
+      string price = "$20";
+      Order newOrder = new Order(info, price);
       List<Order> newOrderList = new List<Order> { newOrder };
       string VendName = "Suzie's Cupcakes";
       Vend newVend = new Vend(VendName);
