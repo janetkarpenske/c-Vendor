@@ -33,6 +33,22 @@ namespace Vendor.Tests
       //Assert
       Assert.AreEqual(info, result);
     }
+    
+    [TestMethod]
+    public void SetOrderInfo_SetOrderInfo_String()
+    {
+      //Arrange
+      string info = "9 Cakes.";
+      Order newOrder = new Order(info);
+
+      //Act
+      string updatedOrderInfo = "10 Cakes";
+      newOrder.OrderInfo = updatedOrderInfo;
+      string result = newOrder.OrderInfo;
+
+      //Assert
+      Assert.AreEqual(updatedOrderInfo, result);
+    }
 
 
   }
