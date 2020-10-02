@@ -37,17 +37,21 @@ namespace Vendor.Tests
     [TestMethod]
     public void SetOrderInfo_SetOrderInfo_String()
     {
-      //Arrange
       string info = "9 Cakes.";
       Order newOrder = new Order(info);
 
-      //Act
       string updatedOrderInfo = "10 Cakes";
       newOrder.OrderInfo = updatedOrderInfo;
       string result = newOrder.OrderInfo;
-
-      //Assert
       Assert.AreEqual(updatedOrderInfo, result);
+    }
+
+        [TestMethod]
+    public void GetAllOrders_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newOrder = new List<Order> { };
+      List<Order> result = Order.GetAllOrders();
+      CollectionAssert.AreEqual(newOrder, result);
     }
 
 
