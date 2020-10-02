@@ -1,7 +1,27 @@
+html {
+  background-color: rgb(211, 238, 250);
+}
 body {
-  margin-left: 500px;
-  background-color: gray;
+  margin-left: 350px;
+  margin-right: 350px;
+  padding: 20px;
+  padding-bottom: 650px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
 }
 h1 {
-  color: blue;
+  color: rgb(75, 75, 90);
+  font-family: 'Bangers', cursive;
+  font-size: 80px;
+}
+a, a:visited {
+  color: rgb(255, 115, 0);
+}
+a:hover {
+  text-shadow: 3px 3px 8px rgb(122, 34, 1);
+  text-decoration: none;
+}
+
+.smallHead {
+  font-size: 60px;
 }

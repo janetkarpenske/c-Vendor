@@ -4,7 +4,7 @@
 
 @using Vendor.Models;
 
-<h3>Here are all the items in this category:</h3>
+<h1 class="smallHead">Here are all the orders for @Model["vendor"].VendName:</h1>
 
 <ol>
 @foreach (Order order in @Model["orders"])
@@ -12,7 +12,13 @@
   <li><a href='/vendors/@Model["vendor"].VendId/orders/@order.OrderId'>@order.OrderInfo</a></li>
 }
 </ol>
-
-<p><a href='/vendors/@Model["vendor"].VendId/orders/new'>Add a new order for this Vendor</a></p>
-<p><a href='/vendors'>Return to list of Vendors</a></p>
-<p><a href='/'>Return to Home Page</a></p>
+<h3><a href='/vendors/@Model["vendor"].VendId/orders/new'>Add a new order for this Vendor</a></h3>
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <p><a href='/vendors'>Return to list of Vendors</a></p>
+  </div>
+  <div class="col-md-6">
+    <p><a href='/'>Return to Home Page</a></p>
+  </div>
+</div>
