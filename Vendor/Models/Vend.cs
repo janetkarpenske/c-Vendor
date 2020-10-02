@@ -21,6 +21,10 @@ namespace Vendor.Models
     {
       return _VendInstances;
     }
+    public static Vend FindVend(int VendSearchId)
+    {
+      return _VendInstances[VendSearchId - 1];
+    }
 
     public static void ClearAll()
     {
