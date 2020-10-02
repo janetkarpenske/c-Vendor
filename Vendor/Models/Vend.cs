@@ -17,6 +17,10 @@ namespace Vendor.Models
       Orders = new List<Order> { };
     }
 
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
     public static List<Vend> GetAllVends()
     {
       return _VendInstances;
