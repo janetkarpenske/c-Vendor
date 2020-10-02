@@ -20,7 +20,10 @@ namespace Vendor.Models
       return _orderInstances;
     }
 
-
+  public static Order FindOrder(int SearchId)
+  {
+    return _orderInstances[SearchId - 1];
+  }
     public static void ClearAll()
     {
       _orderInstances.Clear();

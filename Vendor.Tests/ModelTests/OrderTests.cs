@@ -66,7 +66,7 @@ namespace Vendor.Tests
       CollectionAssert.AreEqual(newOrder, result);
     }
 
-        [TestMethod]
+      [TestMethod]
     public void GetOrderId_OrdersAreCreatedWithAnId_Int()
     {
       string info = "3 Scones";
@@ -76,6 +76,7 @@ namespace Vendor.Tests
       Assert.AreEqual(1, result);
     }
 
+    [TestMethod]
     public void FindOrder_ReturnsTheCorrectOrder_Order()
     {
       //Arrange
