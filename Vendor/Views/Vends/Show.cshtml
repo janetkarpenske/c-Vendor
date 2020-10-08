@@ -6,7 +6,7 @@
 
 <h1 class="smallHead">Here are all the orders for @Model["vendor"].VendName:</h1>
 
-<ol>
+<ol id="orderAlign">
 @foreach (Order order in @Model["orders"])
 {
   <li>@order.OrderInfo</li>

@@ -25,3 +25,7 @@ a:hover {
 .smallHead {
   font-size: 60px;
 }
+
+#orderAlign {
+  text-align: left;
+}
